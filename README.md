@@ -1,0 +1,2 @@
+# gutil
+go module sample
