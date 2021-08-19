@@ -9,7 +9,7 @@ func ReadMapValue(m map[string]interface{}, key string) (interface{}, error) {
 		return nil, errors.New("nil map")
 	}
 
-	if value, ok := m[key]; !ok {
+	if _, ok := m[key]; !ok {
 		return nil, errors.New("key not exist")
 	}
 
