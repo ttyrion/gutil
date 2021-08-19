@@ -1,4 +1,4 @@
-package map
+package maputil
 
 import (
 	"errors"
@@ -6,11 +6,11 @@ import (
 
 func ReadMapValue(m map[string]interface{}, key string) (interface{}, error) {
 	if m == nil {
-		return errors.New("nil map")
+		return nil, errors.New("nil map")
 	}
 
 	if value, ok := m[key]; !ok {
-		return errors.New("key not exist")
+		return nil, errors.New("key not exist")
 	}
 
 	return m[key], nil
